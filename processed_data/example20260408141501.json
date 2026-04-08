@@ -1,0 +1,132 @@
+{
+    "meta_data": {
+        "SIG SAP": "231658",
+        "Customer": "955049",
+        "Date received": "16/01/2026",
+        "Response due": "05/02/2026",
+        "Date closed": "09/02/2026",
+        "Symptom description:": "Contaminação física",
+        "Customer site location:": null,
+        "Customer contact:": null,
+        "Start date (detection of non- conformance):": null,
+        "Customer complaint number:": null,
+        "Customer CFA I.D. number:": null,
+        "CFA serial number:": null,
+        "Product description(s):": null,
+        "Material number(s):": null,
+        "Production order(s):": null,
+        "Customer material number(s):": null,
+        "Number of units produced:": null,
+        "Filled product blocked at customer site:": null,
+        "Number of units left under customer control": null,
+        "Number of units shipped from customer": null,
+        "Number of blocked sleeves": null,
+        "Scrap quantity": null,
+        "Defective quantity": null,
+        "Pallet number(s)": null,
+        "3D / 8D required": null
+    },
+    "D1_team": {
+        "member_1": {
+            "Name": "Zarour Vianna, Julia",
+            "Role": "Análise e aprovação da tratativa",
+            "Function": "Analista da qualidade"
+        },
+        "member_2": {
+            "Name": "Paggi Matuella, Bruna",
+            "Role": "Apoiar tecnicamente a análise de causa",
+            "Function": "Coordenadora de qualidade"
+        },
+        "member_3": {
+            "Name": "Denise Woellner",
+            "Role": "Apoiar tecnicamente a análise de causa",
+            "Function": "Operadora de produção"
+        }
+    },
+    "D2_problem_definition": {
+        "What? in detail is the problem?": "Cliente relatou contaminação física",
+        "Where? did the problem occur?": "Dentro dos sleeves tinha uma espátula",
+        "How? did the problem appear?": "O desvio foi percebido durante a produção",
+        "When? did the problem occur?": "O reporte ocorreu no dia 16/01",
+        "Why? is it a problem?": "Inviabilizando o uso da caixa toda e afetando a produção",
+        "Who? Can help solve the problem?": "A análise será realizada pelo time de especialistas da produção e da qualidade",
+        "Problem Statement:": "Cliente relatou contaminação física, Dentro dos sleeves tinha uma espátula, O desvio foi percebido durante a produção, O reporte ocorreu no dia 16/01, Inviabilizando o uso da caixa toda e afetando a produção, A análise será realizada pelo time de especialistas da produção e da qualidade"
+    },
+    "D3_containment_actions": {
+        "action_1": {
+            "Containment Action Description": "Contabilizar todos os abridores de caixa disponíveis na área",
+            "Owner": "Paggi Matuella, Bruna",
+            "Initiation Date": "03/02/2026",
+            "Target Date": "03/02/2026",
+            "Finish Date": "26/08/2025",
+            "Status": "Finalizado",
+            "Comment": ""
+        },
+        "action_2": {
+            "Containment Action Description": "Realizar a validação dos abridores ao final de cada turno",
+            "Owner": "Paggi Matuella, Bruna",
+            "Initiation Date": "03/02/2026",
+            "Target Date": "03/02/2026",
+            "Finish Date": "03/02/2026",
+            "Status": "Finalizado",
+            "Comment": ""
+        }
+    },
+    "D4_root_cause_analysis": {
+        "Root Cause Analysis/ Statement": "Após a rastreabilidade e análise de causa raiz, encontramos 1 causa(s): Geração do desvio: Inserção do abridor no sleeve ao manipulá-lo na mesa de inspeção Porque 1: O operador não percebeu o extravio do abridor de caixa durante o processo de sorting Porque 2: O abridor entrou no sleeve durante o processo de inspeção do material (sorting) Porque 3: Após abrir a caixa com o abridor, o mesmo permanece sobre a mesa de inspeção, no mesmo lugar em que os sleeves são avaliados. Porque 4: As ferramentas utilizadas para inspeção dos sleeves necessitam estar disponíveis na mesma mesa, porém não foi considerado o risco de misturarem-se com os sleeves As causas foram validadas e as ações propostas estão em andamento."
+    },
+    "D5_corrective_actions": {
+        "corrective_action_1": {
+            "Root Cause": "As ferramentas utilizadas para inspeção dos sleeves necessitam estar disponíveis na mesma mesa, porém não foi considerado o risco de misturarem-se com os sleeves",
+            "Corrective Action Description": "Instalar correntes limitadoras nos abridores de caixa em cada posição individual da mesa de retrabalho",
+            "Owner": "Paggi Matuella, Bruna",
+            "Initiation Date": "03/02/2026",
+            "Target Date": "13/03/2026",
+            "Finish Date": "",
+            "Status": "Em andamento",
+            "Comment": ""
+        }
+    },
+    "D6_preventive_measures": {
+        "validation_1": {
+            "CA&PM Description": "Validação das ações corretivas",
+            "Owner": "Bonzanini, Rodrigo",
+            "Initiation Date": "30 dias após a validação da análise",
+            "Target Date": "30 dias após a validação da análise",
+            "Finish Date": "",
+            "Status": "Em andamento",
+            "Effective [YES/NO]": "",
+            "Comment": ""
+        },
+        "validation_2": {
+            "CA&PM Description": "Validação das ações preventivas",
+            "Owner": "Bonzanini, Rodrigo",
+            "Initiation Date": "30 dias após a validação da análise",
+            "Target Date": "30 dias após a validação da análise",
+            "Finish Date": "",
+            "Status": "Em andamento",
+            "Effective [YES/NO]": "",
+            "Comment": ""
+        }
+    },
+    "D7_validation": {
+        "Closure": {
+            "closure_1": {
+                "Date": "16/01/2026",
+                "Description": "Abertura da RCA para área",
+                "Responsible": "Ceccatto, Livia"
+            },
+            "closure_2": {
+                "Date": "03/02/2026",
+                "Description": "Análise da RCA",
+                "Responsible": "Paggi Matuella, Bruna"
+            },
+            "closure_3": {
+                "Date": "09/02/2026",
+                "Description": "Aprovação e fechamento da RNC",
+                "Responsible": "Zarour Vianna, Julia"
+            }
+        },
+        "Final statement": "DOUBLE CHECK THIS"
+    }
+}
