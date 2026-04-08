@@ -1,0 +1,131 @@
+{
+    "meta_data": {
+        "SIG SAP": "",
+        "Customer": "957562",
+        "Date received": "14/10/2025",
+        "Response": "26/10/2025",
+        "Date closed": "07/11/2025",
+        "Symptom description:": "Sleeves invertidos",
+        "Customer site location:": null,
+        "Customer contact:": null,
+        "Start date (detection of non-conformance):": null,
+        "Customer complaint number:": null,
+        "Customer CFA I.D. number:": null,
+        "CFA serial number:": null,
+        "Product description(s):": null,
+        "Material number(s):": null,
+        "Production order(s):": null,
+        "Customer material number(s):": null,
+        "Number of units produced:": null,
+        "Filled product blocked at customer site:": null,
+        "Number of units left under customer control": null,
+        "Number of units shipped from customer": null,
+        "Number of blocked sleeves": null,
+        "Scrap quantity": null,
+        "Defective quantity": null,
+        "Pallet number(s)": null
+    },
+    "D1_team": {
+        "member_1": {
+            "Name": "Zarour Vianna, Julia",
+            "Role": "Análise e aprovação da tratativa",
+            "Function": "Analista da qualidade"
+        },
+        "member_2": {
+            "Name": "Budnik Ribeiro, Luiz Antonio",
+            "Role": "Apoiar tecnicamente a análise de causa",
+            "Function": "Líder de produção"
+        },
+        "member_3": {
+            "Name": "Vieira, Evandro Luiz",
+            "Role": "Apoiar tecnicamente a análise de causa",
+            "Function": "Analista de planejamento"
+        }
+    },
+    "D2_problem_definition": {
+        "What? in detail is the problem?": "Cliente recebeu uma caixa com sleeves invertidos",
+        "Where? did the problem occur?": "Identificado dois sleeves invertidos",
+        "How? did the problem appear?": "Observado durante o abastecimento da produção",
+        "When? did the problem occur?": "O reporte ocorreu no dia 14/10",
+        "Why? is it a problem?": "Causando perda de produto pois foi formada invertida na máquina",
+        "Who? Can help solve the problem?": "A análise será realizada pelo time de especialistas de produção e de qualidade",
+        "Problem Statement:": "Cliente recebeu uma caixa com sleeves invertidos, Identificado dois sleeves invertidos, Observado durante o abastecimento da produção, O reporte ocorreu no dia 14/10, Causando perda de produto pois foi formada invertida na máquina, A análise será realizada pelo time de especialistas de produção e de qualidade"
+    },
+    "D3_containment_actions": {
+        "action_1": {
+            "Containment Action Description": "Realizar rastreabilidade para verificar se ha possibilidade de mais defeitos.",
+            "Owner": "Budnik Ribeiro, Luiz Antonio",
+            "Initiation Date": "22/10/2025",
+            "Target Date": "22/10/2025",
+            "Finish Date": "26/10/2025",
+            "Status": "Finalizado",
+            "Comment": ""
+        },
+        "action_2": {
+            "Containment Action Description": "Realizar gemba na linha de produção para verificar condições do sistema EQS",
+            "Owner": "Budnik Ribeiro, Luiz Antonio",
+            "Initiation Date": "27/10/2025",
+            "Target Date": "27/10/2025",
+            "Finish Date": "26/10/2025",
+            "Status": "Finalizado",
+            "Comment": ""
+        }
+    },
+    "D4_root_cause_analysis": {
+        "Root Cause Analysis/ Statement": "Após a rastreabilidade e análise de causa raiz, encontramos 1 causa(s): Geração do desvio: Erro de operação (Reposição da caixa durante a inspeção/ separação de material) Porque 1: Porque os sleeves foram colocados na caixa errada durante o processo de inspeção e/ou reposição de caixas que ficam na mesa Porque 2: Porque ele estava distraído no momento da reposição. Porque 3: Porque o ambiente de trabalho não estava controlado e faltam orientações claras sobre foco nas atividades críticas. As causas foram validadas e as ações propostas estão em andamento."
+    },
+    "D5_corrective_actions": {
+        "corrective_action_1": {
+            "Root Cause": "Porque o ambiente de trabalho não estava controlado e faltam orientações claras sobre foco nas atividades críticas.",
+            "Corrective Action Description": "Reciclagem com operação e CQ´s da linha 4 em relação a foma correta de reposição de sleeves na caixa corrugada e a o impacto que fazer da maneira errada pode trazer para o cliente.",
+            "Owner": "Vieira, Evandro Luiz",
+            "Initiation Date": "27/10/2025",
+            "Target Date": "14/11/2025",
+            "Finish Date": "",
+            "Status": "Em andamento",
+            "Comment": ""
+        }
+    },
+    "D6_preventive_measures": {
+        "validation_1": {
+            "CA&PM Description": "Validação das ações corretivas",
+            "Owner": "Bonzanini, Rodrigo",
+            "Initiation Date": "30 dias após a validação da análise",
+            "Target Date": "30 dias após a validação da análise",
+            "Finish Date": "",
+            "Status": "Em andamento",
+            "Effective [YES/NO]": "",
+            "Comment": ""
+        },
+        "validation_2": {
+            "CA&PM Description": "Validação das ações preventivas",
+            "Owner": "Bonzanini, Rodrigo",
+            "Initiation Date": "30 dias após a validação da análise",
+            "Target Date": "30 dias após a validação da análise",
+            "Finish Date": "",
+            "Status": "Em andamento",
+            "Effective [YES/NO]": "",
+            "Comment": ""
+        }
+    },
+    "D7_validation": {
+        "Closure": {
+            "closure_1": {
+                "Date": "14/10/2025",
+                "Description": "Abertura da RCA para área",
+                "Responsible": "de Andrade, Gabriela"
+            },
+            "closure_2": {
+                "Date": "25/08/2025",
+                "Description": "Análise da RCA",
+                "Responsible": "Budnik Ribeiro, Luiz Antonio"
+            },
+            "closure_3": {
+                "Date": "26/08/2025",
+                "Description": "Aprovação e fechamento da RNC",
+                "Responsible": "Zarour Vianna, Julia"
+            }
+        },
+        "Final statement": "DOUBLE CHECK THIS"
+    }
+}

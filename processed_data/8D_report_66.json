@@ -1,0 +1,136 @@
+{
+    "meta_data": {
+        "SIG SAP": "231083",
+        "Customer": "955809",
+        "Date received": "09/01/2026",
+        "Response due": "22/01/2026",
+        "Date closed": "19/01/2026",
+        "Symptom description:": "Divergência de tonalidade",
+        "Customer site location:": null,
+        "Customer contact:": null,
+        "Start date (detection of non- conformance):": null,
+        "Customer complaint number:": null,
+        "Customer CFA I.D. number:": null,
+        "CFA serial number:": null,
+        "Product description(s):": null,
+        "Material number(s):": null,
+        "Production order(s):": null,
+        "Customer material number(s):": null,
+        "Number of units produced:": null,
+        "Filled product blocked at customer site:": null,
+        "Number of units left under customer control": null,
+        "Number of units shipped from customer": null,
+        "Number of blocked sleeves": null,
+        "Scrap quantity": null,
+        "Defective quantity": null,
+        "Pallet number(s)": null
+    },
+    "D1_team": {
+        "member_1": {
+            "Name": "Julia Zarour",
+            "Role": "Análisis y aprobación del tratamiento",
+            "Function": "Analista de calidad"
+        },
+        "member_2": {
+            "Name": "Nascimento, André",
+            "Role": "Apoyar técnicamente el análisis de la causa",
+            "Function": "Coordinador de producción"
+        },
+        "member_3": {
+            "Name": "Lucas Antochevis",
+            "Role": "Apoyar técnicamente el análisis de la causa",
+            "Function": "Líder de producción"
+        },
+        "member_4": {
+            "Name": "Dubinski, Leonardo",
+            "Role": "Liderar el análisis",
+            "Function": "Analista de procesos"
+        }
+    },
+    "D2_problem_definition": {
+        "What? in detail is the problem?": "El cliente informó una divergencia en la tonalidad",
+        "Where? did the problem occur?": "en el color de las mangas",
+        "How? did the problem appear?": "La desviación fue observada durante el envasado",
+        "When? did the problem occur?": "El reporte ocurrió el día 09/01",
+        "Why? is it a problem?": "afectando el estándar de los envases",
+        "Who? Can help solve the problem?": "El análisis será realizado por el equipo de especialistas de producción y calidad",
+        "Problem Statement:": "El cliente informó una divergencia en la tonalidad en el color del sleeve, afectando el estándar de los envases. La desviación fue observada durante el envasado y el reporte ocurrió el día 09/01. El análisis será realizado por el equipo de especialistas de producción y calidad"
+    },
+    "D3_containment_actions": {
+        "action_1": {
+            "Containment Action Description": "Trazabilidad para comprender el fenómeno",
+            "Owner": "Dubinski, Leonardo",
+            "Initiation Date": "16/01/2026",
+            "Target Date": "16/01/2026",
+            "Finish Date": "26/08/2025",
+            "Status": "Finalizado",
+            "Comment": ""
+        },
+        "action_2": {
+            "Containment Action Description": "Corrección del color tras la identificación de la desviación",
+            "Owner": "Antochevis, Lucas",
+            "Initiation Date": "16/01/2026",
+            "Target Date": "16/01/2026",
+            "Finish Date": "16/01/2026",
+            "Status": "Finalizado",
+            "Comment": ""
+        }
+    },
+    "D4_root_cause_analysis": {
+        "Root Cause Analysis/ Statement": "Después de la trazabilidad y el análisis de causa raíz, encontramos 2 causa(s): Generación del desvío: Contaminación de la tinta Por qué 1: La tinta con aspecto azulado (estándar: tinta verde amarilla) Por qué 2: La tinta se contaminó con los residuos que quedaron de la producción anterior Por qué 3: Limpieza inadecuada del sistema (viscosímetro) Por qué 4: No se realizó la limpieza del viscosímetro durante el SETUP Detección del desvío: MODO DE DEFECTO DETECTADO PERO NO RETIRADO Por qué 1: No hubo marcación del defecto Por qué 2: Falla operacional en la marcación del defecto Las causas fueron validadas y las acciones propuestas están en curso."
+    },
+    "D5_corrective_actions": {
+        "corrective_action_1": {
+            "Root Cause": "No se realizó la limpieza del viscosímetro durante el SETUP",
+            "Corrective Action Description": "Capacitación LUP de limpieza del sistema de viscosímetros",
+            "Owner": "Antochevis, Lucas",
+            "Initiation Date": "16/01/2026",
+            "Target Date": "06/02/2026",
+            "Finish Date": "",
+            "Status": "En curso",
+            "Comment": ""
+        }
+    },
+    "D6_preventive_measures": {
+        "validation_1": {
+            "CA&PM Description": "Validación de las acciones correctivas",
+            "Owner": "Gequelin, Thiago",
+            "Initiation Date": "30 días después de la validación del análisis",
+            "Target Date": "30 días después de la validación del análisis",
+            "Finish Date": "",
+            "Status": "En curso",
+            "Effective [YES/NO]": "",
+            "Comment": ""
+        },
+        "validation_2": {
+            "CA&PM Description": "Validación de las acciones preventivas",
+            "Owner": "Gequelin, Thiago",
+            "Initiation Date": "30 días después de la validación del análisis",
+            "Target Date": "30 días después de la validación del análisis",
+            "Finish Date": "",
+            "Status": "En curso",
+            "Effective [YES/NO]": "",
+            "Comment": ""
+        }
+    },
+    "D7_validation": {
+        "Closure": {
+            "closure_1": {
+                "Date": "09/01/2026",
+                "Description": "Apertura de la RCA para el área",
+                "Responsible": "Ceccatto, Livia"
+            },
+            "closure_2": {
+                "Date": "16/01/2026",
+                "Description": "Análisis de la RCA",
+                "Responsible": "Dubinski, Leonardo"
+            },
+            "closure_3": {
+                "Date": "19/01/2026",
+                "Description": "Aprobación y cierre de la RNC",
+                "Responsible": "Zarour Vianna, Julia"
+            }
+        },
+        "Final statement": "DOUBLE CHECK THIS"
+    }
+}
