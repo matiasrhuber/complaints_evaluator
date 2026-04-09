@@ -1,2 +1,4 @@
 data
 rules
+eval_env
+preprocessed_data

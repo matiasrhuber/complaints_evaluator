@@ -148,7 +148,17 @@ def parse_d5(section_d5):
         if any(values_d5):
             dict_d5[f'corrective_action_{i-1}'] = dict(zip(headers_d5, values_d5))
     return dict_d5
-    
+
+def parse_d7(section_d7):
+    """ D7 parsing """
+    headers_d7 = [x.replace("\n", " ") for x in section_d7[1][1:] if x is not None]
+    dict_d7 = {}
+    for i in range(2, len(section_d7)):
+        values_d7 = [x.replace("\n", " ") for x in section_d7[i][1:] if x is not None]
+        if any(values_d7):
+            dict_d7[f'validation_{i-1}'] = dict(zip(headers_d7, values_d7))
+    return dict_d7
+
 def parse_d8(section_d8):
     """ D8 parsing """
     dict_d8_sub = {}
@@ -166,7 +176,6 @@ if __name__ == "__main__":
     curr_dir = os.getcwd()
     DATA_DIR = os.path.join(curr_dir, "data")
     JSON_DIR = os.path.join(curr_dir, "processed_data")
-    #file = "8D_Cooperoeste_RNC 04-26_Contaminação física.pdf"
 
     SECTION_HEADERS = [
         'SIG SAP',
@@ -230,20 +239,14 @@ if __name__ == "__main__":
 
         # Header extraction: D6_preventive_measures
         try:
-            section_d6 = None#sections['D6_preventive_measures'][0]
+            section_d6 = None  #sections['D6_preventive_measures'][0]
         except KeyError:
             print(f"No preventive measures section found in file {file}")
             dict_d6 = None
 
         # Header extraction: D7_validation
         section_d7 = sections['D7_validation'][0]
-
-        headers_d7 = [x.replace("\n", " ") for x in section_d7[1][1:] if x is not None]
-        dict_d7 = {}
-        for i in range(2, len(section_d7)):
-            values_d7 = [x.replace("\n", " ") for x in section_d7[i][1:] if x is not None]
-            if any(values_d7):
-                dict_d7[f'validation_{i-1}'] = dict(zip(headers_d7, values_d7))
+        dict_d7 = parse_d7(section_d7)
 
         # Header extraction: D8_closure
         section_d8 = sections['D8_closure'][0]
@@ -253,10 +256,9 @@ if __name__ == "__main__":
         final_dicts = [dict_md, dict_d1, dict_d2, dict_d3, dict_d4, dict_d5, dict_d7, dict_d8]  # | (dict_d6 if dict_d6 is not None else {})
         for key, section_dict in zip(SECTION_NAMES, final_dicts):
             dict_json[key] = section_dict
-    
 
         # Save extracted data to JSON file
         time_stmp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-        output_file = os.path.join(JSON_DIR, f"8D_report_{random.randint(1,100)}.json")
+        output_file = os.path.join(JSON_DIR, f"8D_report_{random.randint(1,10000)}.json")
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(dict_json, f, ensure_ascii=False, indent=4)
