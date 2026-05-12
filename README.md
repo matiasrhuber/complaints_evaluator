@@ -29,7 +29,58 @@ To run this script on your local machine before deploying to Azure, follow these
    ```bash
    python preprocess.py
 
-## Azure Deployment Instructions
+## 1. Create the Azure Resources (Portal)
+Before deploying code, you need the "house" for it to live in.
+1. *Create the Function App:*
+    Search for the *Function App* in the top bar
+    *Runtime Stack:* Python 3.13
+    *Operating System:* Linux   # Windows might be better
+    *Plan Type:* Consumption (Serverless) is usually best for background processing like 8D analysis.
+2. *Create the Storage Containers:*
+    Go to your *Storage Account* linked to the function
+    Under *Containers*, create two: 8d-reports-input and 8d-json-output #8d-reports-input directory may need to be adjusted depending on what has been done by the China team
+3. *Set Connection Strings:*
+    In the *Function App* menu, go to *Settings* > *Configuration*
+    Add a *New application setting:*
+        Name: AZURE_STORAGE_CONNECTION_STRING
+        Value: (Copy your storage account "Access Key" connection string)
+
+## 2. Prepare Your Deployment Package
+Azure needs your files in a specific structure to recognize the dependencies in your requirements.txt
+*Critical Step for Python:* You cannot just zip the folder. You must install the libraries into the folder so Azure can see them immediately. Run this command in your local terminal:
+    pip install -r requirements.txt --target=".python_packages/lib/site-packages"
+Your folder should now have a .python_packages directory. **Zip the contents** of your folder (not the parent folder itself)
+
+## 3. Deploy the Zip via Portal/CLI
+Since you want to stay within the Portal/Account context, you have two easy options to "push" that zip file:
+
+### Option A: The "Advanced Tools" (Kudu) - No CLI needed
+1. In the Portal, go to your **Function App*
+2. Search for **Advanced Tools* in the left menu and click **Go**
+3. In the new window (Kudu), select **Zip Deploy** from the top menu
+4. **Drag and drop** your 8D_Processor.zip file onto the page. Azure will automatically unzip it and start the service.
+
+### Option B: Azure CLI (From Portal Cloud Shell)
+If you prefer a single command without installing anything on your PC:
+1. Click the **Cloud Shell** icon (>_) at the top right of the Azure Portal
+2. Upload your zip file to the Cloud Shell storage
+3. Run:
+    az functionapp deployment source config-zip -g <ResourceGroupName> -n <FunctionAppName> --src <YourZipFileName>.zip
+
+## 4. Final Validation
+Once deployed, go back to the **Azure Portal:*
+1. Select your **Function App* > **Functions**
+2. You should see your function listeed there.
+3. Click **Log Stream**
+4. Upload a PDF to your 8d-reports-input container in a seperate tab.
+5. Watch the logs; you should see "Processing [file]..." and the successful generation of your JSON in the output container.
+
+
+
+
+
+
+<!-- ## Azure Deployment Instructions
 To automate this pipeline in Azure, it is recommended to use **Azure Functions** with **Blob Storage Trigger**.
 
 1. **Azure Resource Setup**
@@ -45,4 +96,4 @@ To automate this pipeline in Azure, it is recommended to use **Azure Functions**
         1. Click the Azure icon in the sidebar.
         2. Select "Deploy to Function App."
         3. Choose your app name.
-        4. Azure will automatically use the requirements.txt to install pdfplumber and numpy in the cloud environment.
+        4. Azure will automatically use the requirements.txt to install pdfplumber and numpy in the cloud environment. -->
